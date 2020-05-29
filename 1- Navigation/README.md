@@ -4,7 +4,7 @@
 For this project, we train an agent to navigate and collect bananas in a large, 
 square world.
 
-![](navigation.gif)
+![](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/1-%20Navigation/media/navigation.gif)
 
 ## Problem statement 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided 
@@ -28,7 +28,8 @@ agent must get an average score of +13 over 100 consecutive episodes.
 - `Navigation.ipynb`: Notebook used to control and train the agent 
 - `dqn_agent.py`: Create an Agent class that interacts with and learns from the environment 
 - `model.py`: Q-network class used to map state to action values 
-- `report.pdf`: Technical report 
+- `checkpoinnt.pth`: Saved weights of the neural network 
+- `report.md`: Technical report 
 
 ## Getting started
 
