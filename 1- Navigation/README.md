@@ -53,4 +53,4 @@ agent must get an average score of +13 over 100 consecutive episodes.
 
 
 ## Instructions
-    Use Navigation.ipynb to start training the agent.
+Use Navigation.ipynb to start training the agent.
