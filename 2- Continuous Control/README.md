@@ -4,7 +4,9 @@
 
 For this project, you will work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
 
-![Trained Agent][image1]
+| Random agent             |  Trained agent |
+:-------------------------:|:-------------------------:
+![Random Agent](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/2-%20Continuous%20Control/media/untrained.gif)  |  ![Trained Agent](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/2-%20Continuous%20Control/media/trained.gif)
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
