@@ -74,17 +74,11 @@ GRAD_CLIPPING | 1.5         # gradient clipping
 
 ## Results
 
-Trained and untrained agents can be seen below:
+The learning graph can be seen here:
 
-| Random agent             |  Trained agent |
-:-------------------------:|:-------------------------:
-![Random Agent](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/2-%20Continuous%20Control/media/untrained.gif)  |  ![Trained Agent](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/2-%20Continuous%20Control/media/trained.gif)
+![](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/3-%20Collaboration%20and%20Competition/learning.png)
 
-and the learning graph can be seen here:
-
-![](https://github.com/YasinSonmez/Deep-Reinforcement-Learning/blob/master/2-%20Continuous%20Control/media/learning_graph.png)
-
-Average reward of +30 points is achieved after 53 episodes!
+Average reward of +.5 points is achieved after 489 episodes!
 
 ## Ideas for improvement
 
