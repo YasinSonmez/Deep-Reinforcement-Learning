@@ -40,8 +40,6 @@ class Agent():
         """
         self.state_size = state_size
         self.action_size = action_size
-        self.seed = random.seed(random_seed)
-        self.epsilon = EPSILON
 
         # Actor Network (w/ Target Network)
         self.actor_local = Actor(state_size, action_size, random_seed).to(device)
@@ -81,6 +79,7 @@ class Agent():
         return np.clip(action, -1, 1)
 
     def reset(self):
+        """Reset the noise value""" 
         self.noise.reset()
 
     def learn(self, experiences, gamma):
@@ -125,7 +124,7 @@ class Agent():
         # ----------------------- update target networks ----------------------- #
         self.soft_update(self.critic_local, self.critic_target, TAU)
         self.soft_update(self.actor_local, self.actor_target, TAU)
-        if EPSILON_DECAY > 0:
+        if self.epsilon > 0:
             self.epsilon -= EPSILON_DECAY
             self.noise.reset()
         
@@ -152,7 +151,6 @@ class OUNoise:
         self.mu = mu * np.ones(size)
         self.theta = theta
         self.sigma = sigma
-        self.seed = random.seed(seed)
         self.reset()
 
     def reset(self):
@@ -162,7 +160,7 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.randn() for i in range(len(x))])
         self.state = x + dx
         return self.state
 
@@ -181,7 +179,6 @@ class ReplayBuffer:
         self.memory = deque(maxlen=buffer_size)  # internal memory (deque)
         self.batch_size = batch_size
         self.experience = namedtuple("Experience", field_names=["state", "action", "reward", "next_state", "done"])
-        self.seed = random.seed(seed)
 
     def add(self, state, action, reward, next_state, done):
         """Add a new experience to memory."""
