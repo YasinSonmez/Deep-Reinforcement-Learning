@@ -23,6 +23,15 @@ The task is episodic, and in order to solve the environment, your agents must ge
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
 
+### Requeriments:
+- matplotlib
+- numpy
+- torch
+- ipykernel
+- jupyter
+- unity environment(find below)
+- conda
+
 ### Getting Started
 1. Activate the environment:
 
